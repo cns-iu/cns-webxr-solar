@@ -1,0 +1,58 @@
+{
+    "tags": null,
+    "position": [
+        0,
+        0,
+        0
+    ],
+    "rotation": [
+        0,
+        0,
+        0
+    ],
+    "scaling": [
+        1,
+        1,
+        1
+    ],
+    "billboardMode": 0,
+    "scalingDeterminant": 1,
+    "infiniteDistance": false,
+    "ignoreNonUniformScaling": false,
+    "reIntegrateRotationIntoRotationQuaternion": false,
+    "name": "New Transform Node",
+    "id": "54dd80bc-d008-45a8-9cf2-b8f4d6dac551",
+    "state": "",
+    "metadata": {
+        "scripts": [
+            {
+                "enabled": true,
+                "key": "scripts/XRScript2.ts",
+                "_id": "f3437906-24d8-4c21-ab09-90f9cd6e60e4"
+            }
+        ]
+    },
+    "type": "TransformNode",
+    "uniqueId": 1777061506917,
+    "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "isEnabled": true,
+    "animations": [],
+    "ranges": []
+}

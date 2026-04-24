@@ -7,6 +7,8 @@
 	"scripts": {
 		"start": "vite",
 		"dev": "vite",
+		"tunnel": "npx ngrok http 3001",
+		"tunnel:reset": "powershell -NoProfile -Command \"Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match 'ngrok' } | ForEach-Object { Stop-Process -Id $_.ProcessId -Force }; npx ngrok http 3001\"",
 		"build": "vite build",
 		"generate": "babylonjs-editor-cli pack",
 		"serve": "vite preview"

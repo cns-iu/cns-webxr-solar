@@ -1,9 +1,9 @@
 {
     "meshes": [
         {
-            "name": "OlympusMons_LP_2_0",
-            "id": "c5702d19-f32a-4086-923d-ec139a255a2b",
-            "uniqueId": 1777058348889,
+            "name": "moon_Moon_0",
+            "id": "9a979c81-1299-4af6-a608-7bcff8aca80b",
+            "uniqueId": 1777058841313,
             "type": "Mesh",
             "position": [
                 0,
@@ -62,13 +62,13 @@
             "isBlocker": false,
             "sideOrientation": 0,
             "isUnIndexed": false,
-            "geometryUniqueId": 1777058348896,
-            "geometryId": "53d3cbc0-dcce-456d-8244-5f74d92edf65",
+            "geometryUniqueId": 1777058841324,
+            "geometryId": "c6f9407a-b513-451f-b491-5bfa7acf5099",
             "subMeshes": null,
-            "materialUniqueId": 1777058348897,
-            "materialId": "be4b722b-0d75-4924-8673-26c53b784d8e",
+            "materialUniqueId": 1777058841325,
+            "materialId": "ffcd8ddf-1dfd-429c-9ec9-af18d441a42d",
             "metadata": {
-                "parentId": 1777058348893
+                "parentId": 1777058841319
             },
             "instances": [],
             "animations": [],
@@ -76,54 +76,53 @@
             "layerMask": 268435455,
             "alphaIndex": 1.7976931348623157e+308,
             "hasVertexAlpha": false,
-            "overlayAlpha": 0,
+            "overlayAlpha": 1,
             "overlayColor": [
                 0,
                 0,
                 0
             ],
-            "renderOverlay": false,
             "applyFog": true,
-            "delayLoadingFile": "assets/example.scene/geometries/53d3cbc0-dcce-456d-8244-5f74d92edf65.babylonbinarymeshdata",
+            "delayLoadingFile": "assets/example.scene/geometries/c6f9407a-b513-451f-b491-5bfa7acf5099.babylonbinarymeshdata",
             "boundingBoxMaximum": [
-                0.9500942826271057,
-                0.9500000476837158,
-                -0.08495130389928818
+                0.8191156387329102,
+                0.8191124796867371,
+                0.8191127181053162
             ],
             "boundingBoxMinimum": [
-                -0.9500000476837158,
-                -0.9500353336334229,
-                -0.1896793246269226
+                -0.8191099166870117,
+                -0.81911301612854,
+                -0.8191127181053162
             ],
             "_binaryInfo": {
                 "positionsAttrDesc": {
-                    "count": 1860,
+                    "count": 1677,
                     "stride": 3,
                     "offset": 0,
                     "dataType": 1
                 },
                 "normalsAttrDesc": {
-                    "count": 1860,
+                    "count": 1677,
                     "stride": 3,
-                    "offset": 7440,
+                    "offset": 6708,
                     "dataType": 1
                 },
                 "uvsAttrDesc": {
-                    "count": 1240,
+                    "count": 1118,
                     "stride": 2,
-                    "offset": 14880,
+                    "offset": 13416,
                     "dataType": 1
                 },
                 "indicesAttrDesc": {
-                    "count": 1830,
+                    "count": 2880,
                     "stride": 1,
-                    "offset": 19840,
+                    "offset": 17888,
                     "dataType": 0
                 },
                 "subMeshesAttrDesc": {
                     "count": 1,
                     "stride": 5,
-                    "offset": 27160,
+                    "offset": 29408,
                     "dataType": 0
                 }
             },
@@ -145,6 +144,56 @@
             "environmentIntensity": 1,
             "specularIntensity": 1,
             "disableBumpMap": false,
+            "albedoTexture": {
+                "tags": null,
+                "url": "assets/editor-generated_e8b1501babbd94981a48785bb9e3f150.jpg",
+                "uOffset": 0,
+                "vOffset": 0,
+                "uScale": 1,
+                "vScale": -1,
+                "uAng": 0,
+                "vAng": 0,
+                "wAng": 0,
+                "uRotationCenter": 0.5,
+                "vRotationCenter": 0.5,
+                "wRotationCenter": 0.5,
+                "homogeneousRotationInUVTransform": false,
+                "isBlocking": true,
+                "name": "assets/editor-generated_e8b1501babbd94981a48785bb9e3f150.jpg",
+                "metadata": {
+                    "baseSize": {
+                        "width": 512,
+                        "height": 256
+                    }
+                },
+                "hasAlpha": false,
+                "getAlphaFromRGB": false,
+                "level": 1,
+                "coordinatesIndex": 0,
+                "optimizeUVAllocation": true,
+                "coordinatesMode": 0,
+                "wrapU": 1,
+                "wrapV": 1,
+                "wrapR": 1,
+                "anisotropicFilteringLevel": 4,
+                "isCube": false,
+                "is3D": false,
+                "is2DArray": false,
+                "gammaSpace": false,
+                "invertZ": false,
+                "lodLevelInAlpha": false,
+                "lodGenerationOffset": 0,
+                "lodGenerationScale": 0,
+                "linearSpecularLOD": false,
+                "isRenderTarget": false,
+                "animations": [],
+                "invertY": true,
+                "samplingMode": 8,
+                "_creationFlags": 0,
+                "_useSRGBBuffer": true,
+                "internalTextureLabel": "C:/Users/abueckle/Documents/GitHub/cns-webxr-solar/assets/ed",
+                "noMipmap": false
+            },
             "ambientTextureStrength": 1,
             "ambientTextureImpactOnAnalyticalLights": 0,
             "metallic": 1,
@@ -162,9 +211,9 @@
                 0
             ],
             "albedo": [
-                0,
-                0,
-                0
+                1,
+                1,
+                1
             ],
             "baseWeight": 1,
             "reflectivity": [
@@ -262,8 +311,8 @@
                 "outputTextureWidth": 0,
                 "outputTextureHeight": 0
             },
-            "id": "be4b722b-0d75-4924-8673-26c53b784d8e",
-            "name": "material_1",
+            "id": "ffcd8ddf-1dfd-429c-9ec9-af18d441a42d",
+            "name": "Moon",
             "metadata": {},
             "checkReadyOnEveryCall": false,
             "checkReadyOnlyOnce": false,
@@ -303,7 +352,7 @@
                 "mask": 255,
                 "enabled": false
             },
-            "uniqueId": 1777058348897,
+            "uniqueId": 1777058841325,
             "plugins": {
                 "PBRBRDFConfiguration": {
                     "tags": null,
@@ -451,24 +500,24 @@
         "vertexData": []
     },
     "metadata": {
-        "parentId": 1777058348893
+        "parentId": 1777058841319
     },
     "basePoseMatrix": [
-        -1,
+        -1.0000000223517422,
         0,
         0,
         0,
         0,
-        2.220446049250313e-16,
-        1,
+        -1.6292068258930326e-7,
+        1.0000000223517291,
         0,
         0,
-        -1,
-        2.220446049250313e-16,
+        -1.0000000223517291,
+        -1.6292068258930326e-7,
         0,
-        0,
-        0,
-        0,
+        46.8914990234375,
+        3.163071160229151e-15,
+        -1.941479240485907e-8,
         1
     ]
 }

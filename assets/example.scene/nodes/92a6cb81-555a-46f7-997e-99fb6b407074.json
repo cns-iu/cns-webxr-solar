@@ -1,0 +1,58 @@
+{
+    "tags": null,
+    "position": [
+        -3709.26708984375,
+        0,
+        0
+    ],
+    "rotation": [
+        0,
+        0,
+        0
+    ],
+    "rotationQuaternion": [
+        -0.7071068387877036,
+        0,
+        0,
+        0.7071067235853866
+    ],
+    "scaling": [
+        100,
+        100.00000000000001,
+        100.00000000000001
+    ],
+    "billboardMode": 0,
+    "scalingDeterminant": 1,
+    "infiniteDistance": false,
+    "ignoreNonUniformScaling": false,
+    "reIntegrateRotationIntoRotationQuaternion": false,
+    "name": "earth",
+    "id": "92a6cb81-555a-46f7-997e-99fb6b407074",
+    "state": "",
+    "metadata": {
+        "parentId": 1777058841316
+    },
+    "type": "TransformNode",
+    "uniqueId": 1777058841318,
+    "localMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+    ],
+    "isEnabled": true,
+    "animations": [],
+    "ranges": []
+}

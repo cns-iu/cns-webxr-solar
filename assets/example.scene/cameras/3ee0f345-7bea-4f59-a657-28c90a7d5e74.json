@@ -43,7 +43,10 @@
     "id": "3ee0f345-7bea-4f59-a657-28c90a7d5e74",
     "state": "",
     "metadata": {
-        "parentId": 1777058395432
+        "parentId": 1777058395432,
+        "sensorSize": 36,
+        "focalLength": 42.574003560703986,
+        "scripts": []
     },
     "uniqueId": 18,
     "type": "UniversalCamera",

@@ -1,14 +1,14 @@
 {
     "meshes": [
         {
-            "name": "mars_olympus_mons.glb",
-            "id": "ec97a2ca-d2a1-4f1c-a7ef-54adfd2424d2",
-            "uniqueId": 1777058348887,
+            "name": "ps1_style_low_poly_sun_earth_and_moon_bundle.glb",
+            "id": "e39273e1-0e07-4c0d-a4be-adee2565a54f",
+            "uniqueId": 1777058841310,
             "type": "Mesh",
             "position": [
-                -766.2619928820344,
                 0,
-                -71.08326283275323
+                303.47130713298236,
+                147.60565450507875
             ],
             "rotationQuaternion": [
                 0,
@@ -17,9 +17,9 @@
                 0
             ],
             "scaling": [
-                958.2493650554876,
-                -958.2493650554876,
-                958.2493650554876
+                1.370883370885177,
+                -2.420108945500142,
+                2.384559698878379
             ],
             "localMatrix": [
                 1,

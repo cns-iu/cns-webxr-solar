@@ -1647,8 +1647,76 @@ var zeroVector = import_babylonjs58.Vector3.Zero();
 var import_babylonjs59 = require("babylonjs");
 var import_babylonjs60 = require("babylonjs");
 
+// ../../../../Documents/GitHub/cns-webxr-solar/src/scripts/XRScript2.ts
+var XRScript2_exports = {};
+__export(XRScript2_exports, {
+  default: () => XRScript2
+});
+var XRScript2 = class {
+  static {
+    __name(this, "XRScript2");
+  }
+  scene;
+  async onStart() {
+    const diagnostics = await this._collectXRDiagnostics();
+    this._showDiagnosticsOverlay(diagnostics);
+    console.log("XR diagnostics", diagnostics);
+    await this.scene.createDefaultXRExperienceAsync();
+  }
+  async _collectXRDiagnostics() {
+    const lines = [];
+    lines.push(`Secure context: ${window.isSecureContext ? "yes" : "no"}`);
+    const xr = navigator.xr;
+    if (!xr) {
+      lines.push("navigator.xr: not available");
+      lines.push("Enter XR button hidden: WebXR API unavailable in this browser/runtime");
+      return lines;
+    }
+    lines.push("navigator.xr: available");
+    try {
+      const vrSupported = await xr.isSessionSupported("immersive-vr");
+      const arSupported = await xr.isSessionSupported("immersive-ar");
+      lines.push(`immersive-vr supported: ${vrSupported ? "yes" : "no"}`);
+      lines.push(`immersive-ar supported: ${arSupported ? "yes" : "no"}`);
+      if (!vrSupported && !arSupported) {
+        lines.push("Enter XR button hidden: no immersive XR session type is supported");
+      } else {
+        lines.push("An Enter XR button should be available when Babylon XR UI initializes");
+      }
+    } catch (error) {
+      lines.push("Could not query XR session support");
+      lines.push(`Reason: ${String(error)}`);
+    }
+    return lines;
+  }
+  _showDiagnosticsOverlay(lines) {
+    const existing = document.getElementById("xr-diagnostics-overlay");
+    existing?.remove();
+    const overlay = document.createElement("div");
+    overlay.id = "xr-diagnostics-overlay";
+    overlay.style.position = "fixed";
+    overlay.style.top = "12px";
+    overlay.style.left = "12px";
+    overlay.style.zIndex = "9999";
+    overlay.style.maxWidth = "420px";
+    overlay.style.padding = "10px 12px";
+    overlay.style.borderRadius = "8px";
+    overlay.style.background = "rgba(0, 0, 0, 0.8)";
+    overlay.style.color = "#f4f4f4";
+    overlay.style.fontFamily = "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace";
+    overlay.style.fontSize = "12px";
+    overlay.style.lineHeight = "1.45";
+    overlay.style.whiteSpace = "pre-line";
+    overlay.style.pointerEvents = "none";
+    overlay.textContent = ["XR diagnostics", ...lines].join("\n");
+    document.body.appendChild(overlay);
+  }
+};
+
 // ../../../../Documents/GitHub/cns-webxr-solar/src/scripts.ts
-var scriptsMap = {};
+var scriptsMap = {
+  "scripts/XRScript2.ts": XRScript2_exports
+};
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   _applyScriptsForObject,
