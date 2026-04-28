@@ -101,7 +101,8 @@ export class App {
 		}
 
 		SceneLoaderFlags.ForceFullSceneLoadingForIncremental = true;
-		await loadScene("/scene/", "example.babylon", this._scene, scriptsMap, {
+		const sceneBaseUrl = `${import.meta.env.BASE_URL}scene/`;
+		await loadScene(sceneBaseUrl, "example.babylon", this._scene, scriptsMap, {
 			quality: "high",
 		});
 
