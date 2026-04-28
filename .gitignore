@@ -69,6 +69,11 @@ Thumbs.db
 *.binary.babylon
 *.incremental.babylon
 
+# Keep deployed scene assets in version control for GitHub Pages
+!public/scene/**/*.babylon
+!public/scene/**/*.binary.babylon
+!public/scene/**/*.incremental.babylon
+
 # Texture cache or large assets (optional)
 *.dds
 *.env
