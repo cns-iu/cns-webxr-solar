@@ -100383,14 +100383,26 @@ var WebXRTrackingState;
 
 // Users/abueckle/Documents/GitHub/cns-webxr-solar/src/scripts/XRScript2.ts
 init_engineStore();
-var XRScript2 = class {
+var XRScript2 = class _XRScript2 {
   constructor(attachedObject) {
     this.attachedObject = attachedObject;
   }
   static {
     __name(this, "XRScript2");
   }
+  static XR_WORLD_SCALE = 100;
   _manualEnterXrButton = null;
+  _xrExperience = null;
+  _xrStateObserver = null;
+  onStop() {
+    if (this._manualEnterXrButton) {
+      this._manualEnterXrButton.onclick = null;
+    }
+    document.getElementById("xr-diagnostics-overlay")?.remove();
+    document.getElementById("xr-manual-enter-button")?.remove();
+    this._manualEnterXrButton = null;
+    void this._disposeXRExperience();
+  }
   async onStart() {
     this._ensureManualEnterXRButton();
     const diagnostics = await this._collectXRDiagnostics();
@@ -100420,7 +100432,10 @@ var XRScript2 = class {
     }
     try {
       const xrExperience = await WebXRDefaultExperience.CreateAsync(scene);
+      xrExperience.baseExperience.sessionManager.worldScalingFactor = _XRScript2.XR_WORLD_SCALE;
+      this._xrExperience = xrExperience;
       this._ensureManualEnterXRButton(xrExperience);
+      diagnostics.push(`XR world scale: ${_XRScript2.XR_WORLD_SCALE} scene units per meter`);
       diagnostics.push("XR init: success");
       this._showDiagnosticsOverlay(diagnostics);
     } catch (error) {
@@ -100519,13 +100534,34 @@ var XRScript2 = class {
         this._showDiagnosticsOverlay([...current.split("\n"), `Enter VR failed: ${String(error)}`]);
       }
     };
-    xr.baseExperience.onStateChangedObservable.add((state) => {
+    if (this._xrStateObserver) {
+      xr.baseExperience.onStateChangedObservable.remove(this._xrStateObserver);
+    }
+    this._xrStateObserver = xr.baseExperience.onStateChangedObservable.add((state) => {
       if (state === WebXRState.IN_XR) {
         this._setManualButtonState("In VR", true);
       } else {
         this._setManualButtonState("Enter VR", false);
       }
     });
+  }
+  async _disposeXRExperience() {
+    const xrExperience = this._xrExperience;
+    if (!xrExperience) {
+      return;
+    }
+    if (this._xrStateObserver) {
+      xrExperience.baseExperience.onStateChangedObservable.remove(this._xrStateObserver);
+      this._xrStateObserver = null;
+    }
+    try {
+      if (xrExperience.baseExperience.state === WebXRState.IN_XR) {
+        await xrExperience.baseExperience.exitXRAsync();
+      }
+    } catch {
+    }
+    xrExperience.dispose();
+    this._xrExperience = null;
   }
   _setManualButtonState(label, disabled) {
     if (!this._manualEnterXrButton) {

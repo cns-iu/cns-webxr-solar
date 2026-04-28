@@ -11,26 +11,27 @@
         0
     ],
     "scaling": [
+        0.9999999999999986,
         1,
-        1,
-        1
+        0.9999999999999986
     ],
     "billboardMode": 0,
     "scalingDeterminant": 1,
     "infiniteDistance": false,
     "ignoreNonUniformScaling": false,
     "reIntegrateRotationIntoRotationQuaternion": false,
-    "name": "New Transform Node",
+    "name": "SunRotationCenter",
     "id": "54dd80bc-d008-45a8-9cf2-b8f4d6dac551",
     "state": "",
     "metadata": {
         "scripts": [
             {
-                "enabled": true,
+                "enabled": false,
                 "key": "scripts/XRScript2.ts",
                 "_id": "f3437906-24d8-4c21-ab09-90f9cd6e60e4"
             }
-        ]
+        ],
+        "parentId": 1777058841311
     },
     "type": "TransformNode",
     "uniqueId": 1777061506917,

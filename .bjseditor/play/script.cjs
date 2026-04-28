@@ -16,6 +16,14 @@ var __copyProps = (to, from, except, desc) => {
   return to;
 };
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+var __decorateClass = (decorators, target, key, kind) => {
+  var result = kind > 1 ? void 0 : kind ? __getOwnPropDesc(target, key) : target;
+  for (var i = decorators.length - 1, decorator; i >= 0; i--)
+    if (decorator = decorators[i])
+      result = (kind ? decorator(target, key, result) : decorator(result)) || result;
+  if (kind && result) __defProp(target, key, result);
+  return result;
+};
 
 // Users/abueckle/Documents/GitHub/cns-webxr-solar/src/scripts.ts
 var scripts_exports = {};
@@ -1627,6 +1635,23 @@ var import_babylonjs52 = require("babylonjs");
 // Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/tools/particle.js
 var import_babylonjs53 = require("babylonjs");
 
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/decorators/inspector.js
+function visibleAsNumber(label, configuration) {
+  return function(target, propertyKey) {
+    const ctor = target.constructor;
+    ctor._VisibleInInspector ??= [];
+    ctor._VisibleInInspector.push({
+      label,
+      propertyKey,
+      configuration: {
+        ...configuration,
+        type: "number"
+      }
+    });
+  };
+}
+__name(visibleAsNumber, "visibleAsNumber");
+
 // Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/cinematic/parse.js
 var import_babylonjs55 = require("babylonjs");
 var import_babylonjs56 = require("babylonjs");
@@ -1655,14 +1680,26 @@ __export(XRScript2_exports, {
 var import_babylonjs63 = require("babylonjs");
 var import_babylonjs64 = require("babylonjs");
 var import_babylonjs65 = require("babylonjs");
-var XRScript2 = class {
+var XRScript2 = class _XRScript2 {
   constructor(attachedObject) {
     this.attachedObject = attachedObject;
   }
   static {
     __name(this, "XRScript2");
   }
+  static XR_WORLD_SCALE = 100;
   _manualEnterXrButton = null;
+  _xrExperience = null;
+  _xrStateObserver = null;
+  onStop() {
+    if (this._manualEnterXrButton) {
+      this._manualEnterXrButton.onclick = null;
+    }
+    document.getElementById("xr-diagnostics-overlay")?.remove();
+    document.getElementById("xr-manual-enter-button")?.remove();
+    this._manualEnterXrButton = null;
+    void this._disposeXRExperience();
+  }
   async onStart() {
     this._ensureManualEnterXRButton();
     const diagnostics = await this._collectXRDiagnostics();
@@ -1692,7 +1729,10 @@ var XRScript2 = class {
     }
     try {
       const xrExperience = await import_babylonjs64.WebXRDefaultExperience.CreateAsync(scene);
+      xrExperience.baseExperience.sessionManager.worldScalingFactor = _XRScript2.XR_WORLD_SCALE;
+      this._xrExperience = xrExperience;
       this._ensureManualEnterXRButton(xrExperience);
+      diagnostics.push(`XR world scale: ${_XRScript2.XR_WORLD_SCALE} scene units per meter`);
       diagnostics.push("XR init: success");
       this._showDiagnosticsOverlay(diagnostics);
     } catch (error) {
@@ -1791,13 +1831,34 @@ var XRScript2 = class {
         this._showDiagnosticsOverlay([...current.split("\n"), `Enter VR failed: ${String(error)}`]);
       }
     };
-    xr.baseExperience.onStateChangedObservable.add((state) => {
+    if (this._xrStateObserver) {
+      xr.baseExperience.onStateChangedObservable.remove(this._xrStateObserver);
+    }
+    this._xrStateObserver = xr.baseExperience.onStateChangedObservable.add((state) => {
       if (state === import_babylonjs65.WebXRState.IN_XR) {
         this._setManualButtonState("In VR", true);
       } else {
         this._setManualButtonState("Enter VR", false);
       }
     });
+  }
+  async _disposeXRExperience() {
+    const xrExperience = this._xrExperience;
+    if (!xrExperience) {
+      return;
+    }
+    if (this._xrStateObserver) {
+      xrExperience.baseExperience.onStateChangedObservable.remove(this._xrStateObserver);
+      this._xrStateObserver = null;
+    }
+    try {
+      if (xrExperience.baseExperience.state === import_babylonjs65.WebXRState.IN_XR) {
+        await xrExperience.baseExperience.exitXRAsync();
+      }
+    } catch {
+    }
+    xrExperience.dispose();
+    this._xrExperience = null;
   }
   _setManualButtonState(label, disabled) {
     if (!this._manualEnterXrButton) {
@@ -1830,9 +1891,38 @@ var XRScript2 = class {
   }
 };
 
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/src/scripts/EarthRotation.ts
+var EarthRotation_exports = {};
+__export(EarthRotation_exports, {
+  default: () => EarthRotation
+});
+var import_babylonjs66 = require("babylonjs");
+var import_babylonjs67 = require("babylonjs");
+var EarthRotation = class {
+  constructor(mesh) {
+    this.mesh = mesh;
+  }
+  static {
+    __name(this, "EarthRotation");
+  }
+  _rotationSpeed = 2e-3;
+  onStart() {
+  }
+  onUpdate() {
+    this.mesh.rotate(import_babylonjs67.Vector3.UpReadOnly, this._rotationSpeed * this.mesh.getScene().getAnimationRatio(), import_babylonjs66.Space.LOCAL);
+  }
+};
+__decorateClass([
+  visibleAsNumber("Rotation Speed", {
+    min: 0,
+    max: 1
+  })
+], EarthRotation.prototype, "_rotationSpeed", 2);
+
 // Users/abueckle/Documents/GitHub/cns-webxr-solar/src/scripts.ts
 var scriptsMap = {
-  "scripts/XRScript2.ts": XRScript2_exports
+  "scripts/XRScript2.ts": XRScript2_exports,
+  "scripts/EarthRotation.ts": EarthRotation_exports
 };
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {

@@ -141,17 +141,17 @@
         {
             "tags": null,
             "luminance": 1,
-            "turbidity": 10,
-            "rayleigh": 2,
-            "mieCoefficient": 0.005,
+            "turbidity": 15.590000000000002,
+            "rayleigh": -0.22,
+            "mieCoefficient": 0.15000000000000002,
             "mieDirectionalG": 0.8,
             "distance": 500,
-            "inclination": 0.2,
-            "azimuth": 0.25,
+            "inclination": -0.6,
+            "azimuth": 0.4,
             "sunPosition": [
-                1.7995733195149916e-14,
-                404.5084971874737,
-                -293.8926261462366
+                -384.71044214690664,
+                -154.50849718747386,
+                279.50849718747367
             ],
             "useSunPosition": false,
             "cameraOffset": [

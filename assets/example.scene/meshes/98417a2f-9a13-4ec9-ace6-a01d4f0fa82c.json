@@ -7,7 +7,7 @@
             "type": "Mesh",
             "position": [
                 0,
-                100,
+                1,
                 76.31944620509097
             ],
             "rotationQuaternion": [
@@ -68,7 +68,20 @@
             "materialUniqueId": 1777058841323,
             "materialId": "5c363645-2025-42e1-8b2d-1a6aba496eb2",
             "metadata": {
-                "parentId": 1777058428120
+                "scripts": [
+                    {
+                        "enabled": true,
+                        "key": "scripts/EarthRotation.ts",
+                        "_id": "47fcaaee-c801-434e-b2e1-6c514e6799bc",
+                        "values": {
+                            "_rotationSpeed": {
+                                "type": "number",
+                                "value": 0.01
+                            }
+                        }
+                    }
+                ],
+                "parentId": 1777061506917
             },
             "instances": [],
             "animations": [],
@@ -501,7 +514,20 @@
         "vertexData": []
     },
     "metadata": {
-        "parentId": 1777058428120
+        "scripts": [
+            {
+                "enabled": true,
+                "key": "scripts/EarthRotation.ts",
+                "_id": "47fcaaee-c801-434e-b2e1-6c514e6799bc",
+                "values": {
+                    "_rotationSpeed": {
+                        "type": "number",
+                        "value": 0.01
+                    }
+                }
+            }
+        ],
+        "parentId": 1777061506917
     },
     "basePoseMatrix": [
         -1.0000000223517422,

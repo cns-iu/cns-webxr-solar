@@ -1,12 +1,28 @@
 import { Scene } from "@babylonjs/core";
 import { EngineStore } from "@babylonjs/core/Engines/engineStore";
+import { Observer } from "@babylonjs/core/Misc/observable";
 import { WebXRDefaultExperience } from "@babylonjs/core/XR/webXRDefaultExperience";
 import { WebXRState } from "@babylonjs/core/XR/webXRTypes";
 
 export default class XRScript2 {
+  private static readonly XR_WORLD_SCALE = 100;
+
   public constructor(public attachedObject: unknown) {}
 
   private _manualEnterXrButton: HTMLButtonElement | null = null;
+  private _xrExperience: Awaited<ReturnType<typeof WebXRDefaultExperience.CreateAsync>> | null = null;
+  private _xrStateObserver: Observer<WebXRState> | null = null;
+
+  public onStop(): void {
+    if (this._manualEnterXrButton) {
+      this._manualEnterXrButton.onclick = null;
+    }
+    document.getElementById("xr-diagnostics-overlay")?.remove();
+    document.getElementById("xr-manual-enter-button")?.remove();
+    this._manualEnterXrButton = null;
+
+    void this._disposeXRExperience();
+  }
 
   public async onStart(): Promise<void> {
     this._ensureManualEnterXRButton();
@@ -42,7 +58,11 @@ export default class XRScript2 {
 
     try {
       const xrExperience = await WebXRDefaultExperience.CreateAsync(scene);
+      xrExperience.baseExperience.sessionManager.worldScalingFactor = XRScript2.XR_WORLD_SCALE;
+      this._xrExperience = xrExperience;
+
       this._ensureManualEnterXRButton(xrExperience);
+      diagnostics.push(`XR world scale: ${XRScript2.XR_WORLD_SCALE} scene units per meter`);
       diagnostics.push("XR init: success");
       this._showDiagnosticsOverlay(diagnostics);
     } catch (error) {
@@ -155,13 +175,40 @@ export default class XRScript2 {
       }
     };
 
-    xr.baseExperience.onStateChangedObservable.add((state) => {
+    if (this._xrStateObserver) {
+      xr.baseExperience.onStateChangedObservable.remove(this._xrStateObserver);
+    }
+
+    this._xrStateObserver = xr.baseExperience.onStateChangedObservable.add((state) => {
       if (state === WebXRState.IN_XR) {
         this._setManualButtonState("In VR", true);
       } else {
         this._setManualButtonState("Enter VR", false);
       }
     });
+  }
+
+  private async _disposeXRExperience(): Promise<void> {
+    const xrExperience = this._xrExperience;
+    if (!xrExperience) {
+      return;
+    }
+
+    if (this._xrStateObserver) {
+      xrExperience.baseExperience.onStateChangedObservable.remove(this._xrStateObserver);
+      this._xrStateObserver = null;
+    }
+
+    try {
+      if (xrExperience.baseExperience.state === WebXRState.IN_XR) {
+        await xrExperience.baseExperience.exitXRAsync();
+      }
+    } catch {
+      // Best-effort exit. Disposing the experience still removes the XR UI.
+    }
+
+    xrExperience.dispose();
+    this._xrExperience = null;
   }
 
   private _setManualButtonState(label: string, disabled: boolean): void {
