@@ -7,7 +7,7 @@
             "type": "Mesh",
             "position": [
                 0,
-                0,
+                100,
                 0
             ],
             "rotationQuaternion": [
@@ -68,7 +68,7 @@
             "materialUniqueId": 1777058841321,
             "materialId": "d0e0c100-56fa-4cbf-a001-0c343406ab7a",
             "metadata": {
-                "parentId": 1777058841317
+                "parentId": 1777058428120
             },
             "instances": [],
             "animations": [],
@@ -551,7 +551,7 @@
         "vertexData": []
     },
     "metadata": {
-        "parentId": 1777058841317
+        "parentId": 1777058428120
     },
     "basePoseMatrix": [
         -1.0000000223517422,

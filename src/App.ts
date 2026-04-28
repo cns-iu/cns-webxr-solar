@@ -93,8 +93,12 @@ export class App {
 			return;
 		}
 
-		const havok = await HavokPhysics();
-		this._scene.enablePhysics(new Vector3(0, -981, 0), new HavokPlugin(true, havok));
+		try {
+			const havok = await HavokPhysics();
+			this._scene.enablePhysics(new Vector3(0, -981, 0), new HavokPlugin(true, havok));
+		} catch (e) {
+			console.warn("Havok physics failed to load, continuing without physics:", e);
+		}
 
 		SceneLoaderFlags.ForceFullSceneLoadingForIncremental = true;
 		await loadScene("/scene/", "example.babylon", this._scene, scriptsMap, {

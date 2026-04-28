@@ -12,76 +12,7 @@
     ],
     "environment": {
         "iblIntensity": 1,
-        "environmentIntensity": 1,
-        "environmentTexture": {
-            "tags": null,
-            "url": "assets/country.env",
-            "boundingBoxPosition": [
-                0,
-                0,
-                0
-            ],
-            "rotationY": 0,
-            "files": [],
-            "textureMatrix": [
-                1,
-                0,
-                0,
-                0,
-                0,
-                1,
-                0,
-                0,
-                0,
-                0,
-                1,
-                0,
-                0,
-                0,
-                0,
-                1
-            ],
-            "textureMatrixRefraction": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            "name": "assets/country.env",
-            "hasAlpha": false,
-            "getAlphaFromRGB": false,
-            "level": 1,
-            "coordinatesIndex": 0,
-            "optimizeUVAllocation": true,
-            "coordinatesMode": 3,
-            "wrapU": 0,
-            "wrapV": 0,
-            "wrapR": 1,
-            "anisotropicFilteringLevel": 1,
-            "isCube": true,
-            "is3D": false,
-            "is2DArray": false,
-            "gammaSpace": false,
-            "invertZ": false,
-            "lodLevelInAlpha": false,
-            "lodGenerationOffset": 0,
-            "lodGenerationScale": 0.8,
-            "linearSpecularLOD": false,
-            "isRenderTarget": false,
-            "animations": []
-        }
+        "environmentIntensity": 1
     },
     "fog": {
         "fogEnabled": false,
@@ -146,15 +77,15 @@
         "applyGravity": false,
         "updateUpVectorFromRotation": false,
         "rotation": [
-            0.20575666399699388,
-            -1.5892925475144741,
+            0.4517886986643382,
+            -1.7789579843518086,
             0
         ],
         "speed": 200,
         "position": [
-            2039.5700306851543,
-            686.0465200766698,
-            702.2265335540263
+            282.61477098378134,
+            283.88418203741884,
+            66.25634808189075
         ],
         "upVector": [
             0,

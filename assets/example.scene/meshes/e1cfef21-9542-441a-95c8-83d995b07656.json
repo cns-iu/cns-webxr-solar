@@ -1,0 +1,172 @@
+{
+    "meshes": [
+        {
+            "name": "Ground",
+            "id": "e1cfef21-9542-441a-95c8-83d995b07656",
+            "uniqueId": 1777343372873,
+            "type": "Mesh",
+            "position": [
+                0,
+                0,
+                0
+            ],
+            "rotation": [
+                1.5707963267948966,
+                0,
+                0
+            ],
+            "scaling": [
+                10,
+                10,
+                10
+            ],
+            "localMatrix": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+            ],
+            "isEnabled": true,
+            "isVisible": true,
+            "infiniteDistance": false,
+            "pickable": true,
+            "receiveShadows": true,
+            "billboardMode": 0,
+            "visibility": 1,
+            "alwaysSelectAsActiveMesh": false,
+            "checkCollisions": false,
+            "ellipsoid": [
+                0.5,
+                1,
+                0.5
+            ],
+            "ellipsoidOffset": [
+                0,
+                0,
+                0
+            ],
+            "doNotSyncBoundingInfo": false,
+            "isBlocker": false,
+            "sideOrientation": 1,
+            "isUnIndexed": false,
+            "geometryUniqueId": 1777343372874,
+            "geometryId": "589acfe5-0811-49e8-b716-34e41fdcce24",
+            "subMeshes": null,
+            "materialId": "default material",
+            "metadata": {
+                "type": "Plane",
+                "size": 100
+            },
+            "instances": [],
+            "animations": [],
+            "ranges": [],
+            "layerMask": 268435455,
+            "alphaIndex": 1.7976931348623157e+308,
+            "hasVertexAlpha": false,
+            "overlayAlpha": 0,
+            "overlayColor": [
+                0,
+                0,
+                0
+            ],
+            "renderOverlay": false,
+            "applyFog": true,
+            "delayLoadingFile": "assets/example.scene/geometries/589acfe5-0811-49e8-b716-34e41fdcce24.babylonbinarymeshdata",
+            "boundingBoxMaximum": [
+                50,
+                50,
+                0
+            ],
+            "boundingBoxMinimum": [
+                -50,
+                -50,
+                0
+            ],
+            "_binaryInfo": {
+                "positionsAttrDesc": {
+                    "count": 12,
+                    "stride": 3,
+                    "offset": 0,
+                    "dataType": 1
+                },
+                "normalsAttrDesc": {
+                    "count": 12,
+                    "stride": 3,
+                    "offset": 48,
+                    "dataType": 1
+                },
+                "uvsAttrDesc": {
+                    "count": 8,
+                    "stride": 2,
+                    "offset": 96,
+                    "dataType": 1
+                },
+                "indicesAttrDesc": {
+                    "count": 6,
+                    "stride": 1,
+                    "offset": 128,
+                    "dataType": 0
+                },
+                "subMeshesAttrDesc": {
+                    "count": 1,
+                    "stride": 5,
+                    "offset": 152,
+                    "dataType": 0
+                }
+            },
+            "positions": null,
+            "normals": null,
+            "uvs": null,
+            "hasUVs": true,
+            "indices": null
+        }
+    ],
+    "transformNodes": [],
+    "cameras": [],
+    "lights": [],
+    "materials": [],
+    "geometries": {
+        "boxes": [],
+        "spheres": [],
+        "cylinders": [],
+        "toruses": [],
+        "grounds": [],
+        "planes": [],
+        "torusKnots": [],
+        "vertexData": []
+    },
+    "metadata": {
+        "type": "Plane",
+        "size": 100
+    },
+    "basePoseMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+    ]
+}

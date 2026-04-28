@@ -7,8 +7,8 @@
             "type": "Mesh",
             "position": [
                 0,
-                0,
-                0
+                100,
+                102.72852747677348
             ],
             "rotationQuaternion": [
                 0,
@@ -17,9 +17,9 @@
                 1
             ],
             "scaling": [
-                1,
-                1,
-                1
+                10,
+                10,
+                10
             ],
             "localMatrix": [
                 1,
@@ -68,7 +68,7 @@
             "materialUniqueId": 1777058841325,
             "materialId": "ffcd8ddf-1dfd-429c-9ec9-af18d441a42d",
             "metadata": {
-                "parentId": 1777058841319
+                "parentId": 1777058428120
             },
             "instances": [],
             "animations": [],
@@ -76,12 +76,13 @@
             "layerMask": 268435455,
             "alphaIndex": 1.7976931348623157e+308,
             "hasVertexAlpha": false,
-            "overlayAlpha": 1,
+            "overlayAlpha": 0,
             "overlayColor": [
                 0,
                 0,
                 0
             ],
+            "renderOverlay": false,
             "applyFog": true,
             "delayLoadingFile": "assets/example.scene/geometries/c6f9407a-b513-451f-b491-5bfa7acf5099.babylonbinarymeshdata",
             "boundingBoxMaximum": [
@@ -500,7 +501,7 @@
         "vertexData": []
     },
     "metadata": {
-        "parentId": 1777058841319
+        "parentId": 1777058428120
     },
     "basePoseMatrix": [
         -1.0000000223517422,

@@ -17,7 +17,7 @@ var __copyProps = (to, from, except, desc) => {
 };
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-// ../../../../Documents/GitHub/cns-webxr-solar/src/scripts.ts
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/src/scripts.ts
 var scripts_exports = {};
 __export(scripts_exports, {
   _applyScriptsForObject: () => _applyScriptsForObject,
@@ -30,13 +30,13 @@ __export(scripts_exports, {
 });
 module.exports = __toCommonJS(scripts_exports);
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/loader.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/loader.js
 var import_babylonjs47 = require("babylonjs");
 var import_babylonjs48 = require("babylonjs");
 var import_babylonjs49 = require("babylonjs");
 var import_babylonjs50 = require("babylonjs");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/tools/guards.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/tools/guards.js
 function isAbstractMesh(object) {
   switch (object.getClassName?.()) {
     case "Mesh":
@@ -120,7 +120,7 @@ function isSprite(object) {
 }
 __name(isSprite, "isSprite");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/tools/light.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/tools/light.js
 var import_babylonjs = require("babylonjs");
 var import_babylonjs2 = require("babylonjs");
 function configureShadowMapRenderListPredicate(scene) {
@@ -148,7 +148,7 @@ async function configureShadowMapRefreshRate(scene) {
 }
 __name(configureShadowMapRefreshRate, "configureShadowMapRefreshRate");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/rendering/vls.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/rendering/vls.js
 var import_babylonjs3 = require("babylonjs");
 var import_babylonjs4 = require("babylonjs");
 var import_babylonjs5 = require("babylonjs");
@@ -187,7 +187,7 @@ function parseVLSPostProcess(scene, data) {
 }
 __name(parseVLSPostProcess, "parseVLSPostProcess");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/rendering/ssr.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/rendering/ssr.js
 var import_babylonjs6 = require("babylonjs");
 var ssrRenderingPipeline = null;
 var ssrRenderingPipelineCameraConfigurations = /* @__PURE__ */ new Map();
@@ -234,7 +234,7 @@ function parseSSRRenderingPipeline(scene, camera, data) {
 }
 __name(parseSSRRenderingPipeline, "parseSSRRenderingPipeline");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/rendering/taa.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/rendering/taa.js
 var import_babylonjs7 = require("babylonjs");
 var taaRenderingPipeline = null;
 var taaRenderingPipelineCameraConfigurations = /* @__PURE__ */ new Map();
@@ -265,7 +265,7 @@ function parseTAARenderingPipeline(scene, camera, data) {
 }
 __name(parseTAARenderingPipeline, "parseTAARenderingPipeline");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/rendering/ssao.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/rendering/ssao.js
 var import_babylonjs8 = require("babylonjs");
 var ssaoRenderingPipeline = null;
 var ssaoRenderingPipelineCameraConfigurations = /* @__PURE__ */ new Map();
@@ -303,7 +303,7 @@ function parseSSAO2RenderingPipeline(scene, camera, data) {
 }
 __name(parseSSAO2RenderingPipeline, "parseSSAO2RenderingPipeline");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/rendering/motion-blur.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/rendering/motion-blur.js
 var import_babylonjs9 = require("babylonjs");
 var motionBlurPostProcess = null;
 var motionBlurPostProcessCameraConfigurations = /* @__PURE__ */ new Map();
@@ -333,7 +333,7 @@ function parseMotionBlurPostProcess(scene, camera, data) {
 }
 __name(parseMotionBlurPostProcess, "parseMotionBlurPostProcess");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/rendering/default-pipeline.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/rendering/default-pipeline.js
 var import_babylonjs10 = require("babylonjs");
 var import_babylonjs11 = require("babylonjs");
 var import_babylonjs12 = require("babylonjs");
@@ -443,7 +443,7 @@ function parseDefaultRenderingPipeline(scene, camera, data, rootUrl) {
 }
 __name(parseDefaultRenderingPipeline, "parseDefaultRenderingPipeline");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/rendering/tools.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/rendering/tools.js
 function applyRenderingConfigurationForCamera(camera, rootUrl) {
   disposeSSAO2RenderingPipeline();
   disposeVLSPostProcess(camera.getScene());
@@ -478,7 +478,7 @@ function applyRenderingConfigurationForCamera(camera, rootUrl) {
 }
 __name(applyRenderingConfigurationForCamera, "applyRenderingConfigurationForCamera");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/physics.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/physics.js
 var import_babylonjs15 = require("babylonjs");
 var import_babylonjs16 = require("babylonjs");
 function configurePhysicsAggregate(transformNode) {
@@ -510,7 +510,7 @@ function configurePhysicsAggregate(transformNode) {
 }
 __name(configurePhysicsAggregate, "configurePhysicsAggregate");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/rendering.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/rendering.js
 function applyRenderingConfigurations(scene, rendering) {
   const postProcessConfigurations = Array.isArray(rendering) ? rendering : [];
   postProcessConfigurations.forEach((configuration) => {
@@ -540,7 +540,7 @@ function applyRenderingConfigurations(scene, rendering) {
 }
 __name(applyRenderingConfigurations, "applyRenderingConfigurations");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/decorators/apply.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/decorators/apply.js
 var import_babylonjs22 = require("babylonjs");
 var import_babylonjs23 = require("babylonjs");
 var import_babylonjs24 = require("babylonjs");
@@ -548,7 +548,7 @@ var import_babylonjs25 = require("babylonjs");
 var import_babylonjs26 = require("babylonjs");
 var import_babylonjs_gui = require("babylonjs-gui");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/tools/sound.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/tools/sound.js
 function getSoundById(id, scene) {
   const soundTracks = scene.soundTracks ?? [];
   if (!soundTracks.length) {
@@ -564,7 +564,7 @@ function getSoundById(id, scene) {
 }
 __name(getSoundById, "getSoundById");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/tools/vector.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/tools/vector.js
 var import_babylonjs17 = require("babylonjs");
 var import_babylonjs18 = require("babylonjs");
 function parseAxis(axis) {
@@ -582,7 +582,7 @@ function parseAxis(axis) {
 }
 __name(parseAxis, "parseAxis");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/tools/ragdoll.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/tools/ragdoll.js
 function parseRagdollConfiguration(configuration) {
   configuration.runtimeConfiguration.forEach((config) => {
     if (config.rotationAxis) {
@@ -619,10 +619,10 @@ function copyAndParseRagdollConfiguration(configuration) {
 }
 __name(copyAndParseRagdollConfiguration, "copyAndParseRagdollConfiguration");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/container.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/container.js
 var import_babylonjs19 = require("babylonjs");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/tools/tools.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/tools/tools.js
 function cloneJSObject(source) {
   if (!source) {
     return source;
@@ -631,7 +631,7 @@ function cloneJSObject(source) {
 }
 __name(cloneJSObject, "cloneJSObject");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/transform-node.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/transform-node.js
 function configureTransformNodes(scene) {
   const computedMaterials = /* @__PURE__ */ new Set();
   scene.transformNodes.forEach((transformNode) => {
@@ -657,7 +657,7 @@ function configureTransformNodes(scene) {
 }
 __name(configureTransformNodes, "configureTransformNodes");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/container.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/container.js
 var AdvancedAssetContainer = class {
   static {
     __name(this, "AdvancedAssetContainer");
@@ -748,7 +748,7 @@ var AdvancedAssetContainer = class {
   }
 };
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/script/preload/scene.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/script/preload/scene.js
 var import_babylonjs20 = require("babylonjs");
 var import_babylonjs21 = require("babylonjs");
 async function preloadSceneScriptAsset(key, rootUrl, scene) {
@@ -767,7 +767,7 @@ async function preloadSceneScriptAsset(key, rootUrl, scene) {
 }
 __name(preloadSceneScriptAsset, "preloadSceneScriptAsset");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/script/preload/common.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/script/preload/common.js
 async function preloadCommonScriptAsset(key, rootUrl) {
   const response = await fetch(`${rootUrl}${key}`);
   const data = await response.json();
@@ -775,7 +775,7 @@ async function preloadCommonScriptAsset(key, rootUrl) {
 }
 __name(preloadCommonScriptAsset, "preloadCommonScriptAsset");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/script/preload.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/script/preload.js
 var scriptAssetsCache = /* @__PURE__ */ new Map();
 var scriptAssetsParsers = /* @__PURE__ */ new Map();
 async function _preloadScriptsAssets(rootUrl, scene, scriptsMap2) {
@@ -842,7 +842,7 @@ async function _preloadScriptsAssets(rootUrl, scene, scriptsMap2) {
 }
 __name(_preloadScriptsAssets, "_preloadScriptsAssets");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/decorators/apply.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/decorators/apply.js
 function applyDecorators(scene, object, script, instance, rootUrl) {
   const ctor = instance.constructor;
   if (!ctor) {
@@ -1055,7 +1055,7 @@ function applyDecorators(scene, object, script, instance, rootUrl) {
 }
 __name(applyDecorators, "applyDecorators");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/script/apply.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/script/apply.js
 function _applyScriptsForObject(scene, object, scriptsMap2, rootUrl) {
   if (!object.metadata?.scripts) {
     return;
@@ -1127,7 +1127,7 @@ function _removeRegisteredScriptInstance(object, registeredScript) {
 }
 __name(_removeRegisteredScriptInstance, "_removeRegisteredScriptInstance");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/sound.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/sound.js
 var import_babylonjs27 = require("babylonjs");
 var registered = false;
 function registerAudioParser() {
@@ -1153,10 +1153,10 @@ function registerAudioParser() {
 }
 __name(registerAudioParser, "registerAudioParser");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/texture.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/texture.js
 var import_babylonjs28 = require("babylonjs");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/tools/scalar.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/tools/scalar.js
 function getPowerOfTwoUntil(limit) {
   let size = 1;
   while (size <= limit) {
@@ -1166,7 +1166,7 @@ function getPowerOfTwoUntil(limit) {
 }
 __name(getPowerOfTwoUntil, "getPowerOfTwoUntil");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/texture.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/texture.js
 var registered2 = false;
 function registerTextureParser() {
   if (registered2) {
@@ -1222,7 +1222,7 @@ function registerTextureParser() {
 }
 __name(registerTextureParser, "registerTextureParser");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/shadows.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/shadows.js
 var import_babylonjs29 = require("babylonjs");
 var import_babylonjs30 = require("babylonjs");
 var registered3 = false;
@@ -1254,7 +1254,7 @@ function registerShadowGeneratorParser() {
 }
 __name(registerShadowGeneratorParser, "registerShadowGeneratorParser");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/morph-target-manager.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/morph-target-manager.js
 var import_babylonjs31 = require("babylonjs");
 var import_babylonjs32 = require("babylonjs");
 var registered4 = false;
@@ -1335,7 +1335,7 @@ function registerMorphTargetManagerParser() {
 }
 __name(registerMorphTargetManagerParser, "registerMorphTargetManagerParser");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/sprite-map.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/sprite-map.js
 var import_babylonjs33 = require("babylonjs");
 var import_babylonjs34 = require("babylonjs");
 var import_babylonjs35 = require("babylonjs");
@@ -1344,7 +1344,7 @@ var import_babylonjs37 = require("babylonjs");
 var import_babylonjs38 = require("babylonjs");
 var import_babylonjs39 = require("babylonjs");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/tools/sprite.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/tools/sprite.js
 function normalizeAtlasJson(data) {
   if (!Array.isArray(data.frames)) {
     const frames = [];
@@ -1359,7 +1359,7 @@ function normalizeAtlasJson(data) {
 }
 __name(normalizeAtlasJson, "normalizeAtlasJson");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/sprite-map.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/sprite-map.js
 var registered5 = false;
 function registerSpriteMapParser() {
   if (registered5) {
@@ -1412,7 +1412,7 @@ function registerSpriteMapParser() {
 }
 __name(registerSpriteMapParser, "registerSpriteMapParser");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/sprite-manager.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/sprite-manager.js
 var import_babylonjs40 = require("babylonjs");
 var import_babylonjs41 = require("babylonjs");
 var import_babylonjs42 = require("babylonjs");
@@ -1492,7 +1492,7 @@ function registerSpriteManagerParser() {
 }
 __name(registerSpriteManagerParser, "registerSpriteManagerParser");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/node-particle-system-set.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/node-particle-system-set.js
 var import_babylonjs45 = require("babylonjs");
 var import_babylonjs46 = require("babylonjs");
 var registered7 = false;
@@ -1542,7 +1542,7 @@ function registerNodeParticleSystemSetParser() {
 }
 __name(registerNodeParticleSystemSetParser, "registerNodeParticleSystemSetParser");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/loader.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/loader.js
 async function loadScene(rootUrl, sceneFilename, scene, scriptsMap2, options) {
   scene.loadingQuality = options?.quality ?? "high";
   scene.loadingTexturesQuality = options?.texturesQuality ?? scene.loadingQuality;
@@ -1618,54 +1618,98 @@ async function loadScene(rootUrl, sceneFilename, scene, scriptsMap2, options) {
 }
 __name(loadScene, "loadScene");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/material.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/loading/material.js
 var import_babylonjs51 = require("babylonjs");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/tools/animation.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/tools/animation.js
 var import_babylonjs52 = require("babylonjs");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/tools/particle.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/tools/particle.js
 var import_babylonjs53 = require("babylonjs");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/cinematic/parse.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/cinematic/parse.js
 var import_babylonjs55 = require("babylonjs");
 var import_babylonjs56 = require("babylonjs");
 var import_babylonjs57 = require("babylonjs");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/cinematic/tools.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/cinematic/tools.js
 var import_babylonjs54 = require("babylonjs");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/cinematic/generate.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/cinematic/generate.js
 var import_babylonjs61 = require("babylonjs");
 var import_babylonjs62 = require("babylonjs");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/cinematic/events/apply-impulse.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/cinematic/events/apply-impulse.js
 var import_babylonjs58 = require("babylonjs");
 var zeroVector = import_babylonjs58.Vector3.Zero();
 
-// ../../../../Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/cinematic/cinematic.js
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/node_modules/babylonjs-editor-tools/build/src/cinematic/cinematic.js
 var import_babylonjs59 = require("babylonjs");
 var import_babylonjs60 = require("babylonjs");
 
-// ../../../../Documents/GitHub/cns-webxr-solar/src/scripts/XRScript2.ts
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/src/scripts/XRScript2.ts
 var XRScript2_exports = {};
 __export(XRScript2_exports, {
   default: () => XRScript2
 });
+var import_babylonjs63 = require("babylonjs");
+var import_babylonjs64 = require("babylonjs");
+var import_babylonjs65 = require("babylonjs");
 var XRScript2 = class {
+  constructor(attachedObject) {
+    this.attachedObject = attachedObject;
+  }
   static {
     __name(this, "XRScript2");
   }
-  scene;
+  _manualEnterXrButton = null;
   async onStart() {
+    this._ensureManualEnterXRButton();
     const diagnostics = await this._collectXRDiagnostics();
     this._showDiagnosticsOverlay(diagnostics);
+    const scene = this._resolveScene();
+    if (!scene) {
+      this._setManualButtonState("XR Failed", true);
+      diagnostics.push("XR init: failed");
+      diagnostics.push("XR init reason: could not resolve Babylon Scene from script context");
+      this._showDiagnosticsOverlay(diagnostics);
+      return;
+    }
     console.log("XR diagnostics", diagnostics);
-    await this.scene.createDefaultXRExperienceAsync();
+    const xr = navigator.xr;
+    if (!xr) {
+      this._setManualButtonState("XR Unavailable", true);
+      diagnostics.push("XR init: skipped (navigator.xr unavailable)");
+      this._showDiagnosticsOverlay(diagnostics);
+      return;
+    }
+    const vrSupported = await xr.isSessionSupported("immersive-vr");
+    if (!vrSupported) {
+      this._setManualButtonState("VR Unsupported", true);
+      diagnostics.push("XR init: skipped (immersive-vr unsupported)");
+      this._showDiagnosticsOverlay(diagnostics);
+      return;
+    }
+    try {
+      const xrExperience = await import_babylonjs64.WebXRDefaultExperience.CreateAsync(scene);
+      this._ensureManualEnterXRButton(xrExperience);
+      diagnostics.push("XR init: success");
+      this._showDiagnosticsOverlay(diagnostics);
+    } catch (error) {
+      this._setManualButtonState("XR Failed", true);
+      diagnostics.push("XR init: failed");
+      diagnostics.push(`XR init reason: ${String(error)}`);
+      this._showDiagnosticsOverlay(diagnostics);
+    }
   }
   async _collectXRDiagnostics() {
     const lines = [];
+    lines.push(`Time: ${(/* @__PURE__ */ new Date()).toLocaleTimeString()}`);
+    lines.push(`URL: ${window.location.href}`);
+    lines.push(`Protocol: ${window.location.protocol}`);
+    lines.push(`Hostname: ${window.location.hostname}`);
     lines.push(`Secure context: ${window.isSecureContext ? "yes" : "no"}`);
+    lines.push(`User agent: ${navigator.userAgent}`);
     const xr = navigator.xr;
     if (!xr) {
       lines.push("navigator.xr: not available");
@@ -1711,9 +1755,82 @@ var XRScript2 = class {
     overlay.textContent = ["XR diagnostics", ...lines].join("\n");
     document.body.appendChild(overlay);
   }
+  _ensureManualEnterXRButton(xr) {
+    if (!this._manualEnterXrButton) {
+      const button = document.createElement("button");
+      button.id = "xr-manual-enter-button";
+      button.textContent = "Enter VR";
+      button.style.position = "fixed";
+      button.style.right = "16px";
+      button.style.bottom = "16px";
+      button.style.zIndex = "10000";
+      button.style.padding = "10px 14px";
+      button.style.border = "1px solid rgba(255, 255, 255, 0.35)";
+      button.style.borderRadius = "10px";
+      button.style.background = "rgba(15, 23, 42, 0.85)";
+      button.style.color = "#ffffff";
+      button.style.fontFamily = "ui-sans-serif, system-ui, sans-serif";
+      button.style.fontSize = "14px";
+      button.style.cursor = "pointer";
+      button.style.pointerEvents = "auto";
+      button.disabled = true;
+      button.style.opacity = "0.7";
+      document.body.appendChild(button);
+      this._manualEnterXrButton = button;
+    }
+    if (!xr || !this._manualEnterXrButton) {
+      return;
+    }
+    this._setManualButtonState("Enter VR", false);
+    this._manualEnterXrButton.onclick = async () => {
+      try {
+        await xr.baseExperience.enterXRAsync("immersive-vr", "local-floor");
+      } catch (error) {
+        const existing = document.getElementById("xr-diagnostics-overlay");
+        const current = existing?.textContent ?? "XR diagnostics";
+        this._showDiagnosticsOverlay([...current.split("\n"), `Enter VR failed: ${String(error)}`]);
+      }
+    };
+    xr.baseExperience.onStateChangedObservable.add((state) => {
+      if (state === import_babylonjs65.WebXRState.IN_XR) {
+        this._setManualButtonState("In VR", true);
+      } else {
+        this._setManualButtonState("Enter VR", false);
+      }
+    });
+  }
+  _setManualButtonState(label, disabled) {
+    if (!this._manualEnterXrButton) {
+      return;
+    }
+    this._manualEnterXrButton.textContent = label;
+    this._manualEnterXrButton.disabled = disabled;
+    this._manualEnterXrButton.style.opacity = disabled ? "0.7" : "1";
+  }
+  _resolveScene() {
+    const candidate = this.attachedObject;
+    if (this._isScene(candidate)) {
+      return candidate;
+    }
+    if (candidate && typeof candidate.getScene === "function") {
+      const fromGetScene = candidate.getScene();
+      if (this._isScene(fromGetScene)) {
+        return fromGetScene;
+      }
+    }
+    const lastScene = import_babylonjs63.EngineStore.LastCreatedScene;
+    if (this._isScene(lastScene)) {
+      return lastScene;
+    }
+    return null;
+  }
+  _isScene(value) {
+    const sceneLike = value;
+    return !!sceneLike && typeof sceneLike.getUniqueId === "function" && typeof sceneLike.getEngine === "function" && typeof sceneLike.getMeshById === "function";
+  }
 };
 
-// ../../../../Documents/GitHub/cns-webxr-solar/src/scripts.ts
+// Users/abueckle/Documents/GitHub/cns-webxr-solar/src/scripts.ts
 var scriptsMap = {
   "scripts/XRScript2.ts": XRScript2_exports
 };
