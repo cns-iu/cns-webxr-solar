@@ -19,8 +19,9 @@ import {
   Component,
   ElementRef,
   Input,
-  NgZone,
+  OnChanges,
   OnDestroy,
+  SimpleChanges,
   ViewChild,
 } from "@angular/core";
 
@@ -79,7 +80,7 @@ import { scriptsMap } from "./scripts";
     `,
   ],
 })
-export class OrreryComponent implements AfterViewInit, OnDestroy {
+export class OrreryComponent implements AfterViewInit, OnChanges, OnDestroy {
   /** Base URL for the Babylon scene assets, e.g. "/assets/orrery-scene/" */
   @Input() sceneBaseUrl = "/assets/orrery-scene/";
 
@@ -89,17 +90,29 @@ export class OrreryComponent implements AfterViewInit, OnDestroy {
   private _engine: Engine | null = null;
   private _scene: Scene | null = null;
   private _resizeObserver: ResizeObserver | null = null;
+  private _sunMeshNameCandidates = ["sun_sun_0", "Sun", "sun"];
+  private _sunBaseZPosition: number | null = null;
+  private _sunOffsetApplied = false;
+  private _toggleSunListener = ((event: Event) => {
+    const customEvent = event as CustomEvent<{ offsetApplied?: boolean; delta?: number }>;
+    const desiredState = customEvent.detail?.offsetApplied;
+    const delta = customEvent.detail?.delta ?? 10;
+    this._toggleSunPosition(desiredState, delta);
+  }) as EventListener;
 
-  constructor(private _ngZone: NgZone) {}
+  constructor() {}
 
   ngAfterViewInit(): void {
-    // Run Babylon outside Angular's change detection to avoid excessive CD cycles.
-    this._ngZone.runOutsideAngular(() => {
-      void this._init();
-    });
+    void this._init();
+    window.addEventListener("scene:toggle-sun-z", this._toggleSunListener);
+  }
+
+  ngOnChanges(_changes: SimpleChanges): void {
+    // Reserved for future component inputs.
   }
 
   ngOnDestroy(): void {
+    window.removeEventListener("scene:toggle-sun-z", this._toggleSunListener);
     this._resizeObserver?.disconnect();
     this._resizeObserver = null;
     this._scene?.dispose();
@@ -161,5 +174,38 @@ export class OrreryComponent implements AfterViewInit, OnDestroy {
     if (this._scene.activeCamera) {
       this._scene.activeCamera.attachControl();
     }
+  }
+
+  private _toggleSunPosition(desiredState?: boolean, delta = 10): void {
+    const scene = this._scene;
+    if (!scene) {
+      return;
+    }
+
+    const sun = this._findSunMesh(scene);
+    if (!sun) {
+      console.warn("Could not find Sun mesh in scene. Checked names:", this._sunMeshNameCandidates);
+      return;
+    }
+
+    if (this._sunBaseZPosition === null) {
+      this._sunBaseZPosition = sun.position.z;
+    }
+
+    const nextApplied = desiredState ?? !this._sunOffsetApplied;
+    this._sunOffsetApplied = nextApplied;
+
+    sun.position.z = this._sunBaseZPosition + (nextApplied ? delta : 0);
+  }
+
+  private _findSunMesh(scene: Scene) {
+    for (const meshName of this._sunMeshNameCandidates) {
+      const byName = scene.getMeshByName(meshName);
+      if (byName) {
+        return byName;
+      }
+    }
+
+    return scene.meshes.find((mesh) => mesh.name.toLowerCase().includes("sun")) ?? null;
   }
 }

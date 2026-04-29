@@ -1,10 +1,15 @@
-import './style.css';
-import { App } from './App';
+import "zone.js";
+import "@angular/compiler";
+import "./style.css";
 
-// Initialize the app when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-	const app = new App();
-	void app.init().catch((error) => {
-		console.error('App initialization failed', error);
-	});
-}); 
+import { bootstrapApplication } from "@angular/platform-browser";
+import { AppComponent } from "./app.component";
+
+const globalWindow = window as Window & {
+  __appBootstrapPromise?: Promise<unknown>;
+};
+
+globalWindow.__appBootstrapPromise = bootstrapApplication(AppComponent).catch((error) => {
+  console.error("Angular bootstrap failed", error);
+  throw error;
+});
