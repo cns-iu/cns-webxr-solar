@@ -21,7 +21,7 @@ import { OrreryComponent } from "./orrery.component";
   `,
 })
 export class AppComponent {
-  public sceneBaseUrl = "/scene/";
+  public sceneBaseUrl = `${import.meta.env.BASE_URL}scene/`;
   public sunOffsetApplied = false;
 
   public toggleSunZ(): void {
