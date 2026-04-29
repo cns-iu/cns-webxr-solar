@@ -4,10 +4,10 @@
     "shadowOrthoScale": 0.1,
     "autoUpdateExtends": true,
     "autoCalcShadowZBounds": false,
-    "orthoLeft": -250100,
-    "orthoRight": 249900,
-    "orthoTop": 249699.94439699216,
-    "orthoBottom": -250300.05560300784,
+    "orthoLeft": 1.7976931348623157e+308,
+    "orthoRight": 5e-324,
+    "orthoTop": 5e-324,
+    "orthoBottom": 1.7976931348623157e+308,
     "diffuse": [
         1,
         1,
@@ -19,7 +19,7 @@
         1
     ],
     "falloffType": 0,
-    "intensity": 10.310000000000002,
+    "intensity": 1,
     "range": 1.7976931348623157e+308,
     "intensityMode": 0,
     "radius": 0.00001,
@@ -34,18 +34,17 @@
         100
     ],
     "direction": [
-        0,
-        0,
-        90
+        -1,
+        -2,
+        -1
     ],
-    "name": "Sun Light Source",
-    "id": "573d177b-c977-47dc-b722-d2262945c731",
+    "name": "New Directional Light",
+    "id": "776213ed-ceeb-413b-ae0b-1e5e6bc8dc8d",
     "state": "",
     "metadata": {
-        "parentId": 1777058395432,
-        "refreshRate": 1
+        "parentId": 1777058395432
     },
-    "uniqueId": 1777344648820,
+    "uniqueId": 1777420621464,
     "type": 1,
     "animations": [],
     "ranges": [],
