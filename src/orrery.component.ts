@@ -154,7 +154,7 @@ export class OrreryComponent implements AfterViewInit, OnDestroy {
     }
 
     SceneLoaderFlags.ForceFullSceneLoadingForIncremental = true;
-    await loadScene(this.sceneBaseUrl, "example.babylon.txt", this._scene, scriptsMap, {
+    await loadScene(this.sceneBaseUrl, "example.babylon", this._scene, scriptsMap, {
       quality: "high",
     });
 

@@ -4,12 +4,12 @@
  */
 
 import { loadScene, scriptsDictionary, scriptAssetsCache, _applyScriptsForObject, _removeRegisteredScriptInstance, _preloadScriptsAssets } from "babylonjs-editor-tools";
-import * as scripts_XRScript2 from "./scripts/XRScript2";
 import * as scripts_EarthRotation from "./scripts/EarthRotation";
+import * as scripts_XRScript2 from "./scripts/XRScript2";
 
 export const scriptsMap = {
-    "scripts/XRScript2.ts": scripts_XRScript2,
-	"scripts/EarthRotation.ts": scripts_EarthRotation
+    "scripts/EarthRotation.ts": scripts_EarthRotation,
+	"scripts/XRScript2.ts": scripts_XRScript2
 };
 
 export { loadScene, scriptsDictionary, scriptAssetsCache, _applyScriptsForObject, _removeRegisteredScriptInstance, _preloadScriptsAssets };
